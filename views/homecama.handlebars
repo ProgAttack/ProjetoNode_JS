@@ -1,0 +1,43 @@
+
+<h1>Lista de Camas </h1>
+
+<form class="new-post" action="/cadastrocama " method="get">
+  <button type="submit" class="btn btn-dark">Novo cadastro</button>
+</form>
+
+
+
+
+
+<table class="table border border-dark mt-5">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col" class="bg-warning">ID</th>
+      <th scope="col " class="bg-warning">Quantidade</th>
+      <th scope="col" class="bg-warning">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each camas}}
+    <tr>
+      <td>{{id}}</td>
+      <td>{{quantidade}}</td>
+      <td>
+        <div class="grup-action">
+          <form class="form-action" action="/edit/{{id}}" method="get">
+            <button type="submit" class="action-edit btn btn-primary mb-1">
+              EDITAR
+            </button>
+          </form>
+          <form class="form-action" action="/deletarcama/{{id}}" method="get">
+            <button type="submit" class="action-delete btn btn-danger">
+              EXCLUIR
+            </button>
+          </form>
+        </div>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+

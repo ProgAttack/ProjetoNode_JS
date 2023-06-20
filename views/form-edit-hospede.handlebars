@@ -1,0 +1,22 @@
+
+<div class="container p-5 card  mt-5  bg-primary-subtle">
+    <div>
+        <h1 class="p-3 text-center">Atualização de hospedes</h1>
+    </div>
+  <form action="/editadohospede/{{id}}" method="post">
+    <div class="mb-3 col-sm-6 ">
+        <label class="form-label text-center">Nome:</label>
+        <input type="text" name="nomehospede" class="form-control" placeholder="Digite o nome" >
+        
+    </div>
+    <div class="mb-3 col-sm-6 ">
+        <label class="form-label">CPF:</label>
+        <input type="text" name="cpf" class="form-control" placeholder="Digite seu cpf" data-ls-module="charContador" maxlength="11">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Gravar</button>
+
+    
+  </form>
+</div>
+

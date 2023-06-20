@@ -1,0 +1,47 @@
+
+
+
+<h1>Lista de Hospedes </h1>
+
+<form class="new-post" action="/cadastroreserva" method="get">
+  <button type="submit" class="btn btn-dark">Novo cadastro</button>
+</form>
+
+
+
+
+
+<table class="table border border-dark mt-5">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col" class="bg-warning">ID</th>
+      <th scope="col " class="bg-warning">Data de entrada</th>
+      <th scope="col " class="bg-warning">Data de saida</th>
+      <th scope="col" class="bg-warning">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each reservas}}
+    <tr>
+      <td>{{id}}</td>
+      <td>{{dataentrada}}</td>
+      <td>{{datasaida}}</td>
+      <td>
+        <div class="grup-action">
+          <form class="form-action" action="/editreserva/{{id}}" method="get">
+            <button type="submit" class="action-edit btn btn-primary mb-1">
+              EDITAR
+            </button>
+          </form>
+          <form class="form-action" action="/deletarreserva/{{id}}" method="get">
+            <button type="submit" class="action-delete btn btn-danger">
+              EXCLUIR
+            </button>
+          </form>
+        </div>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
